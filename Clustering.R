@@ -85,6 +85,30 @@ fviz_nbclust(df, kmeans, method = "silhouette")
 
 
 # 3.
+# CLARA Method 
+
+clara.res <- clara(df, 2, samples = 50, pamLike = TRUE)
+print(clara.res)
+
+# Medoids
+clara.res$medoids
+
+# Clustering
+head(clara.res$clustering, 10)
+
+dd <- cbind(df, cluster = clara.res$cluster)
+head(dd, n = 4)
+
+fviz_cluster(clara.res,
+             palette = c("#00AFBB", "#FC4E07"), # color palette
+             ellipse.type = "t", # Concentration ellipse
+             geom = "point", pointsize = 1,
+             ggtheme = theme_classic()
+)
+
+
+
+# 4.
 # Gap Statistic Method
 # compute gap statistic
 
@@ -94,6 +118,7 @@ gap_stat <- clusGap(df, FUN = kmeans, nstart = 25,
 # Print the result
 print(gap_stat, method = "firstmax")
 fviz_gap_stat(gap_stat)
+
 
 
 # Final Clustering
