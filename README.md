@@ -35,3 +35,4 @@ But another question arises: how do you know the correct value of K, or how many
 Source:
 1. https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html
 2. https://stanford.edu/~cpiech/cs221/handouts/kmeans.html by Andrew Ng
+3. https://en.wikipedia.org/wiki/Euclidean_distance
