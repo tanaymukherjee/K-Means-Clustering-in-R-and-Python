@@ -37,3 +37,4 @@ Source:
 2. https://stanford.edu/~cpiech/cs221/handouts/kmeans.html by Andrew Ng
 3. https://en.wikipedia.org/wiki/Euclidean_distance
 4. https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
+5. https://data-flair.training/blogs/clustering-in-r-tutorial/
