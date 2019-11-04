@@ -36,3 +36,4 @@ Source:
 1. https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html
 2. https://stanford.edu/~cpiech/cs221/handouts/kmeans.html by Andrew Ng
 3. https://en.wikipedia.org/wiki/Euclidean_distance
+4. https://www.analyticsvidhya.com/blog/2019/08/comprehensive-guide-k-means-clustering/
