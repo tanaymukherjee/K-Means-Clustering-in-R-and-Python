@@ -28,8 +28,10 @@ K-means allocates every data point in the dataset to the nearest centroid (minim
 Then K-means recalculates the centroids by taking the mean of all data points assigned to that centroid’s cluster, hence reducing the total intra-cluster variance in relation to the previous step. The “means” in the K-means refers to averaging the data and finding the new centroid
 The algorithm iterates between steps 2 and 3 until some criteria is met (e.g. the sum of distances between the data points and their corresponding centroid is minimized, a maximum number of iterations is reached, no changes in centroids value or no data points change clusters)
 
-Source:
-https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html
+The initial result of running this algorithm may not be the best possible outcome and rerunning it with different randomized starting centroids might provide a better performance (different initial objects may produce different clustering results). For this reason, it’s a common practice to run the algorithm multiple times with different starting points and evaluate different initiation methods (e.g. Forgy or Kaufman approaches).
 
-Additional Resource: https://stanford.edu/~cpiech/cs221/handouts/kmeans.html
-by Andrew Ng
+But another question arises: how do you know the correct value of K, or how many centroids to create? There is no universal answer for this, and although the optimal number of centroids or clusters is not known a priori, different approaches exist to try to estimate it. One commonly used approach is testing different numbers of clusters and measure the resulting sum of squared errors, choosing the K value at which an increase will cause a very small decrease in the error sum, while a decrease will sharply increase the error sum. This point that defines the optimal number of clusters is known as the “elbow point”, and can be used as a visual measure to find the best pick for the value of K.
+
+Source:
+1. https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html
+2. https://stanford.edu/~cpiech/cs221/handouts/kmeans.html by Andrew Ng
